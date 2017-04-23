@@ -103,7 +103,10 @@ typedef Gm_polyhedron::Edge_iterator									Poly_edge_iterator;
 //}
 
 void read_input(std::string filename, Polyhedron_3& inp_poly) {
-	//TODO: replace this function with a real input reader from vrml
+	//use polyhedron_viewer to parse vrml 
+	s_polyhedron_viewer->parse(filename);
+	inp_poly = s_polyhedron_viewer->get_polyhedron;
+	
 	std::vector<Point_3> points;
 	Generator gen(100.0);
 
