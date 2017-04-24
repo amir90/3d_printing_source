@@ -105,7 +105,8 @@ typedef Gm_polyhedron::Edge_iterator									Poly_edge_iterator;
 void read_input(std::string filename, Polyhedron_3& inp_poly) {
 	//use polyhedron_viewer to parse vrml 
 	s_polyhedron_viewer->parse(filename);
-	inp_poly = s_polyhedron_viewer->get_polyhedron;
+	inp_poly = Polyhedron_3(CGAL::convex_hull_3(s_polyhedron_viewer->get_polyhedron.m_coords.begin(), s_polyhedron_viewer->get_polyhedron.m_coords.end(), s_polyhedron_viewer->get_polyhedron));
+
 	
 	std::vector<Point_3> points;
 	Generator gen(100.0);
