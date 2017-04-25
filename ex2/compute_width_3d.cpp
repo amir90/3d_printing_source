@@ -54,7 +54,7 @@ typedef double RT;
 
 // NOTE: the choice of double here for a number type may cause problems
 //       for degenerate point sets
-typedef CGAL::Homogeneous<RT>                     K;
+typedef CGAL::Exact_predicates_exact_constructions_kernel K;
 typedef CGAL::Convex_hull_traits_3<K>             Traits;
 typedef Traits::Polyhedron_3                      Polyhedron_3;
 
